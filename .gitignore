@@ -1,0 +1,5 @@
+#env file
+.env
+
+#audio file
+.wav
