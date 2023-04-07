@@ -1,3 +1,7 @@
+# VTuber's AI Anime
+
+![](assets/vtube.png)
+
 ### Docker
 
 To run Voicevox:
