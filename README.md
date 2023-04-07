@@ -7,7 +7,7 @@
 <li><a href="https://voicevox.hiroshiba.jp/">Voicevox</a><span> : Japanese Deep-Learning AI Voice Synthesizer</span></li>
 </ul>
 
-### Speech Rocoganize
+### Speech Recoganize
 <ul>
 <li><a href="https://github.com/biodatlab/whisper-th-demo">Thonburian Whisper</a><span> : An Automatic Speech Recognition model for Thai</span></li>
 </ul>
