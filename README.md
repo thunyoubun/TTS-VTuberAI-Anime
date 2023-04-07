@@ -2,7 +2,9 @@
 
 VTuber's AI with anime voice , using tts and speech recognize.
 
-![](assets/vtube.png?raw=true)
+<p align="center">
+  <img src="assets/vtube.png" width="" alt="intro">
+</p>
 
 ### TTS
 <ul>
