@@ -2,6 +2,7 @@
 
 VTuber's AI with anime voice , using tts and speech recognize.
 
+<a tarket="_blank" href="https://youtu.be/XQv4zA5c_ZU"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="ardhach" height="30" width="40" />Youtube</a>
 <p align="center">
   <img src="assets/vtube.png" width="" alt="intro">
 </p>
