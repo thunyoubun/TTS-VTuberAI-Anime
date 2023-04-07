@@ -1,5 +1,7 @@
 # VTuber's AI Anime
 
+VTuber's AI with anime voice , using tts and speech recognize.
+
 ![](assets/vtube.png?raw=true)
 
 ### TTS
