@@ -1,14 +1,12 @@
 import winsound
 import time
-
 import keyboard
 from utils.translate import *
 from utils.tts import *
+from utils.subtitle import *
 
 def translate_text(text):
     global is_Speaking
-    # subtitle will act as subtitle for the viewer
-    # subtitle = translate_google(text, "ID")
 
     # tts will be the string to be converted to audio
     detect = detect_google(text)
@@ -28,11 +26,8 @@ def translate_text(text):
     # Japanese TTS
     voicevox_tts(tts)
 
-    # Silero TTS, Silero TTS can generate English, Russian, French, Hindi, Spanish, German, etc. Uncomment the line below. Make sure the input is in that language
-    # silero_tts(tts_en, "en", "v3_en", "en_21")
-
     # Generate Subtitle
-    # generate_subtitle(chat_now, text)
+    generate_subtitle(text)
 
     time.sleep(1)
 
@@ -49,10 +44,10 @@ def translate_text(text):
         f.truncate(0)
 
 if __name__ == "__main__":
-        
-    while True:
-        if keyboard.is_pressed('esc'):
-            print("Exiting program")
-            break
-        text = input("text : ")
-        translate_text(text)
+    
+    try:
+        while True:
+            text = input("text input : ")
+            translate_text(text)
+    except KeyboardInterrupt:
+        print("Exit Program.\n")
