@@ -22,7 +22,8 @@ def transcribe_audio():
 
     pipe.model.config.forced_decoder_ids = pipe.tokenizer.get_decoder_prompt_ids(language=lang, task="transcribe")
     text = pipe("record.wav")["text"]
-    print("text : ", text)
+    print("text from audio : ", text)
+    return text
 
 def record_audio():
     CHUNK = 1024
@@ -52,7 +53,7 @@ def record_audio():
     wf.writeframes(b''.join(frames))
     wf.close()
     print("Converting...")
-    transcribe_audio()
+    # transcribe_audio()
 
 if __name__ == "__main__":
     try:
@@ -60,5 +61,6 @@ if __name__ == "__main__":
         while True:
             if keyboard.is_pressed('LEFT_SHIFT'):
                 record_audio()
+                transcribe_audio()
     except KeyboardInterrupt:
         print("Stopped Program")

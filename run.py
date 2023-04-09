@@ -4,6 +4,7 @@ import keyboard
 from utils.translate import *
 from utils.tts import *
 from utils.subtitle import *
+from utils.sttThai import *
 
 def translate_text(text):
     global is_Speaking
@@ -43,11 +44,27 @@ def translate_text(text):
     with open ("chat.txt", "w") as f:
         f.truncate(0)
 
+def speechToText():
+
+    record_audio()
+    text = transcribe_audio()
+    translate_text(text)
+
+
+
 if __name__ == "__main__":
     
     try:
-        while True:
-            text = input("text input : ")
-            translate_text(text)
+        mode = input("[Mode] 1).Text to Speech 2).Speech to Text : ")
+        if mode == "1":
+            while True:
+                text = input("text input : ")
+                translate_text(text)
+        if mode == "2":
+            print("Press and Hold Left Shift to record audio")
+            while True:
+                if keyboard.is_pressed('LEFT_SHIFT'):
+                    speechToText()
+            
     except KeyboardInterrupt:
         print("Exit Program.\n")
